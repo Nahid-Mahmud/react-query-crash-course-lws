@@ -1,16 +1,17 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import ProductDetails from "./components/ProductDetails";
 import ProductList from "./components/ProductList";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // useState for selecting id from the product list
+  const [selectedId, setSelectedId] = useState(1);
 
   return (
-    <>
-      <ProductList />
-    </>
+    <div className="flex">
+      <ProductList setSelectedId={setSelectedId} selectedId={selectedId} />
+      <ProductDetails id={selectedId} />
+    </div>
   );
 }
 
