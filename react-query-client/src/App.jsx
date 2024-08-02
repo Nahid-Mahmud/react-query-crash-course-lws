@@ -2,15 +2,16 @@ import { useState } from "react";
 import "./App.css";
 import ProductDetails from "./components/ProductDetails";
 import ProductList from "./components/ProductList";
+import AddProduct from "./components/AddProduct";
 
 function App() {
   // useState for selecting id from the product list
-  const [selectedId, setSelectedId] = useState(1);
 
   return (
-    <div className="flex">
-      <ProductList setSelectedId={setSelectedId} selectedId={selectedId} />
-      <ProductDetails id={selectedId} />
+    <div className="flex m-2">
+      <AddProduct />
+      <ProductList />
+      <ProductDetails />
     </div>
   );
 }

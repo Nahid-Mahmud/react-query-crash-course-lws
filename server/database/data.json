@@ -42,7 +42,7 @@
     },
     {
       "id": "6",
-      "title": "MacBook Pro",
+      "title": "MacBook Pro ",
       "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
       "price": 1749,
       "rating": 4.57,
@@ -241,18 +241,10 @@
       "thumbnail": "https://random.imagecdn.app/500/150"
     },
     {
-      "id": "13dfb563-bc9a-4027-8100-fea2348e51bd",
-      "title": "Bed",
-      "description": "A superb Cozy Bed",
-      "price": 2000,
-      "rating": 5,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "3dbb3096-f2ef-4815-8653-d6c4a2965dbe",
-      "title": "Bed",
-      "description": "Cozy Bed",
-      "price": 1000,
+      "id": "8524c94b-5409-4e73-b19a-000be034ed32",
+      "title": "Apple Magic Keyboard",
+      "description": "Awesome Keyboard",
+      "price": "999",
       "rating": 5,
       "thumbnail": "https://random.imagecdn.app/500/150"
     }
