@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { useContext, useState } from "react";
 import { SelectedIdContext } from "../context/selectedIdContext";
@@ -7,6 +7,8 @@ const api = "http://localhost:3001";
 
 const AddProduct = () => {
   const { setSelectedId } = useContext(SelectedIdContext);
+
+  const queryClient = useQueryClient();
 
   // state for the form inputs
 
@@ -22,7 +24,12 @@ const AddProduct = () => {
 
   const mutation = useMutation({
     mutationFn: (newProduct) => axios.post(`${api}/products`, newProduct),
+    onSuccess: () => {
+      queryClient?.invalidateQueries(["products"]);
+    },
   });
+
+  //   handle submit function
 
   const handleSubmit = (e) => {
     e.preventDefault();

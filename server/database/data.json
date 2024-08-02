@@ -241,10 +241,18 @@
       "thumbnail": "https://random.imagecdn.app/500/150"
     },
     {
-      "id": "8524c94b-5409-4e73-b19a-000be034ed32",
-      "title": "Apple Magic Keyboard",
-      "description": "Awesome Keyboard",
-      "price": "999",
+      "id": "445bb02b-c76b-4ac1-bd14-7220132c254b",
+      "title": "Iphone 96",
+      "description": "Introducing the Iphone 96 Pro, a flagship smartphone that embodies innovation. With an exceptional camera system, powerful performance, and a captivating display, it redefines mobile photography. Capture life's moments in exquisite detail and enjoy a seamless user experience.",
+      "price": "363",
+      "rating": 5,
+      "thumbnail": "https://random.imagecdn.app/500/150"
+    },
+    {
+      "id": "e893dc13-c06d-4802-82d5-744d89d132ce",
+      "title": "I Monn",
+      "description": "Dilam description",
+      "price": "36",
       "rating": 5,
       "thumbnail": "https://random.imagecdn.app/500/150"
     }

@@ -37,8 +37,8 @@ const ProductDetails = () => {
 
       {/* show product details here also useing tailwind css */}
       <div className="p-5">
-        <div className="flex justify-between items-center border p-2 shadow-lg rounded-md overflow-hidden max-w-sm border-gray-200 py-4">
-          <div className="flex items-center">
+        <div className="flex justify-between  items-center border p-2 shadow-lg rounded-md overflow-hidden max-w-sm border-gray-200 py-4">
+          <div className="flex flex-col items-center">
             <img src={product?.thumbnail} alt={product?.title} className="w-24 h-24 object-cover" />
             <div className="ml-4">
               <h2 className="text-lg font-semibold">{product?.title}</h2>

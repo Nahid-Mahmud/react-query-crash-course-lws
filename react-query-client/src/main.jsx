@@ -11,7 +11,7 @@ import SelectedIdContextPRovider from "./provider/selectedIdContextPRovider.jsx"
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5000,
+      staleTime: 1000 * 30,
     },
   },
 });
