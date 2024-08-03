@@ -1,17 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { SelectedIdContext } from "../context/selectedIdContext";
 
 const api = "http://localhost:3001";
 
 const retriveProducts = async ({ queryKey }) => {
-  const response = await axios.get(`${api}/${queryKey[0]}`);
+  const response = await axios.get(`${api}/${queryKey[0]}?_page=${queryKey[1]?.page}&_per_page=5`);
 
-  return response.data.reverse();
+  return response?.data;
 };
 
 const ProductList = () => {
+  // state for pagination
+  const [page, setPage] = useState(1);
+
   // use axios and react-query to fetch data from the API
 
   const { selectedId, setSelectedId } = useContext(SelectedIdContext);
@@ -23,7 +26,7 @@ const ProductList = () => {
     refetch,
     isStale,
   } = useQuery({
-    queryKey: ["products"],
+    queryKey: ["products", { page }],
     queryFn: retriveProducts,
     // refetch interval
 
@@ -41,7 +44,7 @@ const ProductList = () => {
       {/* show product cart here also useing tailwind css */}
 
       <div className=" grid grid-cols-2 p-5 gap-5 ">
-        {products?.map((product) => (
+        {products?.data?.map((product) => (
           <div
             key={product.id}
             onClick={() => setSelectedId(product?.id)}
@@ -60,6 +63,29 @@ const ProductList = () => {
             </button> */}
           </div>
         ))}
+      </div>
+
+      {/* buttons for pagination */}
+
+      <div className="flex justify-center space-x-2">
+        {products?.prev && (
+          <button
+            onClick={() => setPage(products?.prev)}
+            disabled={page === 1}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Previous
+          </button>
+        )}
+        {products?.next && (
+          <button
+            onClick={() => setPage(products?.next)}
+            disabled={products?.length < 5}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Next
+          </button>
+        )}
       </div>
     </div>
   );

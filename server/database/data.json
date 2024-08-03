@@ -241,18 +241,50 @@
       "thumbnail": "https://random.imagecdn.app/500/150"
     },
     {
-      "id": "445bb02b-c76b-4ac1-bd14-7220132c254b",
-      "title": "Iphone 96",
-      "description": "Introducing the Iphone 96 Pro, a flagship smartphone that embodies innovation. With an exceptional camera system, powerful performance, and a captivating display, it redefines mobile photography. Capture life's moments in exquisite detail and enjoy a seamless user experience.",
-      "price": "363",
+      "id": "a938aa1d-679f-40f9-8043-21a51d591db6",
+      "title": "Bed",
+      "description": "Awesome bed",
+      "price": 0,
       "rating": 5,
       "thumbnail": "https://random.imagecdn.app/500/150"
     },
     {
-      "id": "e893dc13-c06d-4802-82d5-744d89d132ce",
-      "title": "I Monn",
-      "description": "Dilam description",
-      "price": "36",
+      "id": "0329ea25-4e2e-44e6-93e9-e808535af553",
+      "title": "adsf",
+      "description": "asdf",
+      "price": "063",
+      "rating": 5,
+      "thumbnail": "https://random.imagecdn.app/500/150"
+    },
+    {
+      "id": "858b6343-9792-4178-8c3b-9c88da5add42",
+      "title": "New",
+      "description": "asdf",
+      "price": "063",
+      "rating": 5,
+      "thumbnail": "https://random.imagecdn.app/500/150"
+    },
+    {
+      "id": "63e61a9e-0b1e-40c3-9a6b-3558bca7bf16",
+      "title": "New",
+      "description": "asdf",
+      "price": 0,
+      "rating": 5,
+      "thumbnail": "https://random.imagecdn.app/500/150"
+    },
+    {
+      "id": "734fff14-ea68-45ab-a96e-f2451c38a336",
+      "title": "New",
+      "description": "asdf",
+      "price": 0,
+      "rating": 5,
+      "thumbnail": "https://random.imagecdn.app/500/150"
+    },
+    {
+      "id": "3e849404-de8e-462f-9dec-c52de6401214",
+      "title": "New",
+      "description": "asdf",
+      "price": 0,
       "rating": 5,
       "thumbnail": "https://random.imagecdn.app/500/150"
     }

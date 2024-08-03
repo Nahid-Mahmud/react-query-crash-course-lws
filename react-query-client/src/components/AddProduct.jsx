@@ -24,8 +24,14 @@ const AddProduct = () => {
 
   const mutation = useMutation({
     mutationFn: (newProduct) => axios.post(`${api}/products`, newProduct),
-    onSuccess: () => {
+    // invalid queries after successfully posting data
+    onSuccess: (data, variables, context) => {
+      console.log(context);
       queryClient?.invalidateQueries(["products"]);
+    },
+
+    onMutate: (variables) => {
+      return { grettings: "Hello" };
     },
   });
 
@@ -49,7 +55,9 @@ const AddProduct = () => {
     }
   };
 
-  //    {"id":"13dfb563-bc9a-4027-8100-fea2348e51bd","title":"Bed","description":"A superb Cozy Bed","price":2000,"rating":5,"thumbnail":"https://random.imagecdn.app/500/150"}
+  if (mutation.isLoading) return <div>Adding product...</div>;
+  if (mutation.isError) return <div>An error has occured: {mutation.error.message}</div>;
+
   return (
     <div className="w-1/5 flex-1">
       <h1 className="text-center text-2xl font-bold">Add Product</h1>
