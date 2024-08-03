@@ -23,7 +23,7 @@ const AddProduct = () => {
   //   posting data usnig axios and react-query
 
   const mutation = useMutation({
-    mutationFn: (newProduct) => axios.post(`${api}/products`, newProduct),
+    mutationFn: async (newProduct) => await axios.post(`${api}/products`, newProduct),
     // invalid queries after successfully posting data
     onSuccess: (data, variables, context) => {
       console.log(context);

@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { useContext, useState } from "react";
 import { SelectedIdContext } from "../context/selectedIdContext";
@@ -12,6 +12,8 @@ const retriveProducts = async ({ queryKey }) => {
 };
 
 const ProductList = () => {
+  const queryclient = useQueryClient();
+
   // state for pagination
   const [page, setPage] = useState(1);
 
@@ -23,15 +25,39 @@ const ProductList = () => {
     data: products,
     error,
     isLoading,
-    refetch,
-    isStale,
   } = useQuery({
     queryKey: ["products", { page }],
     queryFn: retriveProducts,
     // refetch interval
 
-    refetchInterval: 1000 * 30,
+    refetchInterval: 1000 * 60 * 5,
   });
+
+  // reversed product
+
+  // mutation function
+
+  const mutation = useMutation({
+    mutationFn: async (id) => await axios?.delete(`${api}/products/${id}`),
+    onSuccess: () => {
+      queryclient?.invalidateQueries(["products"]);
+    },
+  });
+
+  // delete product function
+
+  const handleDelete = async (id) => {
+    // check for confirmation
+    const confirmDelete = window.confirm("Are you sure you want to delete this product?");
+
+    if (confirmDelete) {
+      try {
+        mutation?.mutate(id);
+      } catch (err) {
+        console.log(err?.message);
+      }
+    }
+  };
 
   if (isLoading) return <div> Fetching data ... </div>;
 
@@ -48,12 +74,21 @@ const ProductList = () => {
           <div
             key={product.id}
             onClick={() => setSelectedId(product?.id)}
-            className={`flex col-span-1 justify-between items-center border max-w-sm border-gray-200 py-4 cursor-pointer ${
+            className={`flex col-span-1 justify-between items-center border max-w-sm border-gray-200 py-4 cursor-pointer relative ${
               selectedId === product.id ? "bg-gray-200" : ""
             }`}
           >
             <div className="flex items-center p-2">
               <img src={product.thumbnail} alt={product.title} className="w-24 h-24 object-cover" />
+
+              {/* delete button  */}
+              <button
+                onClick={() => handleDelete(product.id)}
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded absolute right-2 top-5"
+              >
+                Delete
+              </button>
+
               <div className="ml-4">
                 <h2 className="text-lg font-semibold">{product.title}</h2>
               </div>

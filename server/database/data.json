@@ -1,22 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "rating": 4.69,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "2",
-      "title": "iPhone X",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899,
-      "rating": 4.44,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
       "id": "3",
       "title": "Samsung Universe 9",
       "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
@@ -230,62 +214,6 @@
       "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
       "price": 60,
       "rating": 4.44,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "30",
-      "title": "Key Holder",
-      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-      "price": 30,
-      "rating": 4.92,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "a938aa1d-679f-40f9-8043-21a51d591db6",
-      "title": "Bed",
-      "description": "Awesome bed",
-      "price": 0,
-      "rating": 5,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "0329ea25-4e2e-44e6-93e9-e808535af553",
-      "title": "adsf",
-      "description": "asdf",
-      "price": "063",
-      "rating": 5,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "858b6343-9792-4178-8c3b-9c88da5add42",
-      "title": "New",
-      "description": "asdf",
-      "price": "063",
-      "rating": 5,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "63e61a9e-0b1e-40c3-9a6b-3558bca7bf16",
-      "title": "New",
-      "description": "asdf",
-      "price": 0,
-      "rating": 5,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "734fff14-ea68-45ab-a96e-f2451c38a336",
-      "title": "New",
-      "description": "asdf",
-      "price": 0,
-      "rating": 5,
-      "thumbnail": "https://random.imagecdn.app/500/150"
-    },
-    {
-      "id": "3e849404-de8e-462f-9dec-c52de6401214",
-      "title": "New",
-      "description": "asdf",
-      "price": 0,
-      "rating": 5,
       "thumbnail": "https://random.imagecdn.app/500/150"
     }
   ]
